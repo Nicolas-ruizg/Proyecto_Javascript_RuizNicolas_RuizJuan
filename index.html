@@ -14,6 +14,14 @@
             <div class="form-group">
                 <input type="text" id="searchField" name="query" placeholder="Introduce el término de búsqueda" required>
             </div>
+            <select name="category" id="filter">
+                <option value="films">Películas</option>
+                <option value="people">Personajes</option>
+                <option value="planets">Planetas</option>
+                <option value="species">Especies</option>
+                <option value="starships">Naves</option>
+                <option value="vehicles">Vehículos</option>
+            </select>
             
             <button><img src="/imagenes/lupa.png" alt="Buscar"></button>
         </section>
@@ -33,15 +41,7 @@
             <option value="starships">Naves</option>
             <option value="vehicles">Vehículos</option>
         </select>
-        <section>
-            <label for="options">Color de piel: </label>
-            <select name="options" id="options">
-                <option value="default">Cualquiera</option>
-                <option value="fair">Justa</option>
-                <option value="green">Verde</option>
-            </select>
-        </section>
-        <button id="searchButton"><img src="/imagenes/lupa.png" alt="Buscar"></button>
+        
     </div>
     
     <section id="list"></section>

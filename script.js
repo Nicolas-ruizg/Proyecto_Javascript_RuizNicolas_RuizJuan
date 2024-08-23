@@ -6,9 +6,6 @@ function listarElementos() {
     let categoria = document.querySelector("#category").value;
     let lista = document.querySelector("#list");
 
-    // Mostrar u ocultar el filtro de color de piel según la categoría seleccionada
-   
-
     // Realizar la solicitud de la API
     fetch(`https://swapi.dev/api/${categoria}/?page=${pagina}`)
         .then(response => response.json())
@@ -72,10 +69,12 @@ document.querySelector("#filter").addEventListener('change', () => {
     listarElementos();
 });
 
-document.querySelector("#searchForm button").addEventListener('click', () => {
+document.querySelector("#searchForm button").addEventListener('click', (event) => {
+    event.preventDefault();  // Previene el comportamiento predeterminado del botón
+
     let busqueda = document.querySelector("#searchField").value;
-    let categoria = document.querySelector("#filter").value;
-    
+    let categoria = document.querySelector("#category").value;
+
     fetch(`https://swapi.dev/api/${categoria}/?search=${busqueda}`)
         .then(response => response.json())
         .then(data => {
