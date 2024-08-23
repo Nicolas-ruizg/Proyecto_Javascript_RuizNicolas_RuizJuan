@@ -1,190 +1,476 @@
+/* General */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    color: #f0f0f0; /* Color de texto claro para contraste */
     margin: 0;
     padding: 0;
-    
+    background: url('imagenes/galaxia.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 header {
-    background-color:white;
-    border-radius: 10%;
-    color: white;
-
-    
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    border-radius: 15px;
+    color: #fff;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 80%;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6); /* Efecto de neón */
+    text-align: center;
 }
 
 .logo {
     display: block;
     margin: 0 auto;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid #00ffff; /* Borde cian futurista */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6); /* Efecto de neón */
 }
 
 #searchForm {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 15px; /* Espaciado entre elementos */
     margin: 10px 0;
 }
 
 #searchField {
-    margin-right: 10px;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid #00ffff; /* Borde cian */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    color: #00ffff; /* Texto cian */
+    width: 250px; /* Ancho ajustado */
+    backdrop-filter: blur(5px); /* Difuminado de fondo */
+}
+
+#filter, #options, #category {
+    padding: 12px;
+    border: 1px solid #00ffff; /* Borde cian */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    color: #00ffff; /* Texto cian */
+    text-align: center;
+    backdrop-filter: blur(5px); /* Difuminado de fondo */
 }
 
 #filter, #options {
-    margin-right: 10px;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    margin: 0 15px; /* Espaciado entre selectores */
 }
 
 button {
-    background-color: #007bff;
+    background: linear-gradient(45deg, #ffcc00, #ffaa00); /* Gradiente amarillo */
     border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 5px 10px;
+    border-radius: 10px;
+    color: #000;
+    padding: 12px 25px;
     cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.8); /* Sombra cálida */
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ffaa00, #ffcc00); /* Gradiente invertido */
+    box-shadow: 0 0 25px rgba(255, 204, 0, 1); /* Efecto de neón más fuerte */
 }
 
 button img {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; /* Separación entre el ícono y el texto */
 }
 
 .container-fondo {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .video-background {
     width: 100%;
-    height: 10000%;
-    max-height: 300px;
+    height: 100%;
+    max-height: 350px;
     object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Efecto de neón */
 }
 
 .bienvenida {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    padding: 25px;
+    border: 1px solid #00ffff; /* Borde cian */
+    border-radius: 10px;
+    margin: 30px;
     text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Efecto de neón */
 }
 
 .pregunta {
     text-align: center;
-    margin: 20px;
-    font-size: 1.2em;
+    margin: 30px;
+    font-size: 1.5em;
+    color: #00ffff; /* Color cian */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Sombra de texto de neón */
 }
 
 #Category {
     text-align: center;
-    margin: 20px;
+    margin: 30px;
+}
+
+#category {
+    padding: 12px;
+    border: 1px solid #00ffff; /* Borde cian */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    color: #00ffff; /* Texto cian */
+    text-align: center;
+    margin: 20px 10px; /* Espaciado entre el selector y otros elementos */
+    backdrop-filter: blur(5px); /* Difuminado de fondo */
 }
 
 #list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px;
+    margin: 30px;
 }
 
 .elemento {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    border: 1px solid #00ffff; /* Borde cian */
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
     text-align: center;
-    width: 200px;
+    width: 220px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Efecto de neón */
 }
 
 .info {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
     text-decoration: none;
-    color: #007bff;
+    color: #00ffff; /* Texto cian */
 }
 
 .info img {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
 }
 
 #buttons {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .btnHome {
     display: block;
     text-align: center;
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    margin: 30px auto;
+    padding: 12px;
+    color: #faed27;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    max-width: 30%;
+    font-size: 20px;
+    border: 2px solid #faed27;
+    box-shadow: inset 0 0 15px 0 #faed27, 0 0 15px #faed27; /* Sombra de neón */
+    cursor: pointer;
+    transition: background 0.6s, color 0.3s;
+    
+}
+.btnHome:hover {
+    color: black;
+    background-color: #faed27; /* Fondo amarillo al pasar el mouse */
+    box-shadow: inset 0 0 15px 0 #faed27, 0 0 25px #faed27; /* Efecto de neón más fuerte */
 }
 
 .details {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    color: white;
+    border: 3px solid yellow;
     border-radius: 5px;
+    background-color:black;
+    z-index: 1;
+    background-image: url("./imagenes/r2d212.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 600px ;
+    box-shadow: inset 0 0 32px 0 #faed27,0 0 32px #faed27 ;
 }
 
-
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    z-index: -1; /* Asegura que el contenido esté encima del video */
+span {
+    color: #faed27; /* Color amarillo */
 }
 
-#video {
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 2em; /* Tamaño de fuente aumentado */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Sombra de texto de neón */
 }
 
-/* Estilos para el contenido */
 .content {
     position: relative;
-    z-index: 1; /* Asegura que el contenido esté sobre el video */
-    color: white;
+    z-index: 1;
+    color: #f0f0f0; /* Color de texto claro */
     text-align: center;
     padding: 50px;
+    backdrop-filter: blur(10px); /* Difuminado del fondo */
 }
 
-/* Estilo para el control de velocidad */
 label, input {
     display: block;
     margin: 20px auto;
     font-size: 1.2rem;
-    color: white;
+    color: #f0f0f0; /* Color de texto claro */
 }
 
 input {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #00ffff; /* Borde cian */
     text-align: center;
-    width: 100px;
+    width: 150px; /* Ancho ajustado */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    color: #00ffff; /* Texto cian */
+}
+
+
+@media (max-width: 425px) {
+
+    /* Logo más pequeño y centrado */
+    .logo {
+        width: 35%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* Texto de bienvenida centrado y ajustado */
+    .bienvenida p {
+        text-align: center;
+        font-size: 0.9em;
+        width: 80%; /* Ancho ajustado para que no se corte el texto */
+        margin: 0 auto;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        gap: 5px; 
+        justify-content: center;
+        overflow: hidden;
+        padding: 5px; /* Menor padding para más espacio en pantalla */
+    }
+
+    /* Ajuste de la pregunta */
+    .pregunta {
+        padding-top: 20px;
+        font-size: 0.9em; /* Texto ligeramente más pequeño */
+    }
+
+    .bienvenida {
+        margin-top: 30px; /* Menor margen superior */
+    }
+
+    /* Ajuste de selección de categorías */
+    #category select {
+        height: 35px;
+        width: 100px;
+        margin-right: 5px;
+    }
+
+    option {
+        font-size: 0.9em;
+        height: 30px;
+    }
+
+    /* Ajuste de la lista */
+    #list {
+        margin-top: 20px;
+        display: grid;
+        gap: 5px; /* Menor espacio entre los elementos */
+        padding-bottom: 10px;
+    }
+
+    #list div {
+        font-size: 0.8em; /* Texto más pequeño para caber mejor en la pantalla */
+    }
+
+    #buttons {
+        padding: 20px; /* Menor padding general */
+        padding-top: 10px;
+    }
+
+    #buttons button {
+        font-size: 0.9em; /* Texto más pequeño en los botones */
+    }
+
+    .btnHome {
+        color: #F2F2F2;
+        font-size: 0.9em;
+    }
+
+    /* Detalles ajustados */
+    .details {
+        color: #F2F2F2;
+        margin: auto;
+        margin-top: 40px; /* Menor margen superior */
+        padding: 15px; /* Menor padding */
+        min-height: 80vh;
+        width: 95%; /* Mayor anchura para aprovechar el espacio */
+        background-size: 300px;
+    }
+
+    .details p {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 0.9em; /* Texto más pequeño en párrafos */
+    }
+
+    /* Ajuste de título */
+    h1 {
+        color: #FFE81F;
+        font-size: 1.3em;
+        padding-bottom: 15px;
+    }
+
+    /* Categoría ajustada */
+    #Category {
+        margin-top: 10px;
+    }
+
+    /* Formulario de búsqueda optimizado */
+    #searchForm {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column; /* Colocar en columna */
+        align-items: center;
+        gap: 10px;
+    }
+
+    #searchField {
+        width: 90%; /* Ancho del campo de búsqueda ajustado */
+        padding: 10px; /* Mejor padding para mejor usabilidad */
+    }
+}
+
+@media (min-width: 426px) and (max-width: 1024px) {
+    
+    .logo {
+        width: 30%;
+    }
+
+    .bienvenida p {
+        padding-top: 100px;
+        text-align: center;
+        font-size: 1.3em;
+        width: 60%;
+    }
+    
+    header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .pregunta {
+        padding-top: 50px;
+        font-size: 1.3em;
+    }
+    
+    
+    .bienvenida {
+        margin-top: 50px;
+    }
+    
+    #category select {
+        height: 50px;
+        width: 150px;
+        margin-right: 10px;
+    }
+    
+    option {
+        font-size: 1.2em;
+    }
+
+    #list {
+        margin-top: 20px;
+        display: grid;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+    
+    #list div {
+        font-size: 1em;
+    }
+    
+    #buttons {
+        padding: 30px;
+        padding-top: 20px;
+    }
+    
+    #buttons button {
+        font-size: 1.2em;
+    }
+    
+    .btnHome {
+        color: #F2F2F2;
+        font-size: 1.2em;
+    }
+    
+    .details {
+        color: #F2F2F2;
+        margin: auto;
+        margin-top: 50px;
+        padding: 30px;
+        min-height: 70vh;
+        width: 85%;
+        background-size: 400px;
+    }
+    
+    .details p {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.2em;
+    }
+    
+    h1 {
+        color: #FFE81F;
+        font-size: 2em;
+        padding-bottom: 15px;
+    }
+
+    #Category {
+        margin-top: 40px;
+    }
+
+    #searchForm {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #searchField {
+        width: 70%;
+    }
 }

@@ -7,12 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container-fondo">
-        <video autoplay muted loop id="video">
-            <source src="imagenes/25689-352026460_medium.mp4" type="video/mp4">
-            Tu navegador no soporta la reproducción de video.
-        </video>
-    </div>
     <header>
         <img class="logo" src="./imagenes/fondo.jpg" alt="logo de la página" width="200">
         
@@ -20,22 +14,15 @@
             <div class="form-group">
                 <input type="text" id="searchField" name="query" placeholder="Introduce el término de búsqueda" required>
             </div>
-            <select name="category" id="filter">
-                <option value="films">Películas</option>
-                <option value="people">Personajes</option>
-                <option value="planets">Planetas</option>
-                <option value="species">Especies</option>
-                <option value="starships">Naves</option>
-                <option value="vehicles">Vehículos</option>
-            </select>
-            <button><img src="assets/search.svg" alt="Buscar"></button>
+            
+            <button><img src="/imagenes/lupa.png" alt="Buscar"></button>
         </section>
     </header>
     
     
     
     
-    <p class="pregunta">¿Por dónde quieres comenzar tu exploración?</p>
+    <p class="pregunta">¿Estas listo para aventurarte en el mundo STAR WARS?</p>
 
     <div id="Category">
         <select name="category" id="category">
@@ -54,7 +41,7 @@
                 <option value="green">Verde</option>
             </select>
         </section>
-        <button id="searchButton"><img src="assets/search.svg" alt="Buscar"></button>
+        <button id="searchButton"><img src="/imagenes/lupa.png" alt="Buscar"></button>
     </div>
     
     <section id="list"></section>

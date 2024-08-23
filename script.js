@@ -1,20 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const video = document.getElementById('video');
-    const speedControl = document.getElementById('speed');
-
-    // Establece la velocidad inicial del video
-    video.playbackRate = speedControl.value;
-
-    // Cambia la velocidad del video cuando se ajusta el control
-    speedControl.addEventListener('input', function() {
-        video.playbackRate = this.value;
-    });
-});
-
-
-
-
-
 let pagina = 1;
 let informacion;
 
@@ -24,14 +7,7 @@ function listarElementos() {
     let lista = document.querySelector("#list");
 
     // Mostrar u ocultar el filtro de color de piel según la categoría seleccionada
-    if (categoria === "people") {
-        document.querySelector("#Category section").style.display = "block";
-    } else {
-        document.querySelector("#Category section").style.display = "none";
-    }
-
-    // Obtener el color de piel seleccionado
-    let color = document.querySelector("#options").value;
+   
 
     // Realizar la solicitud de la API
     fetch(`https://swapi.dev/api/${categoria}/?page=${pagina}`)
@@ -39,25 +15,21 @@ function listarElementos() {
         .then(data => {
             informacion = data.results;
             lista.innerHTML = '';
-
-            // Mostrar los elementos filtrados
             informacion.forEach(elemento => {
-                if (color === "default" || elemento.skin_color === color) {
-                    const div = document.createElement('div');
-                    div.classList.add('elemento');
+                const div = document.createElement('div');
+                div.classList.add('elemento');
 
-                    const p = document.createElement('p');
-                    p.textContent = elemento.name || elemento.title;
-                    div.appendChild(p);
+                const p = document.createElement('p');
+                p.textContent = elemento.name || elemento.title;
+                div.appendChild(p);
 
-                    const botonInfo = document.createElement('a');
-                    botonInfo.innerHTML = '<img src="assets/more.svg" alt="Más información">';
-                    botonInfo.href = `item.html?type=${categoria}&id=${elemento.url.split('/').filter(Boolean).pop()}`;
-                    botonInfo.classList.add('info');
-                    div.appendChild(botonInfo);
+                const botonInfo = document.createElement('a');
+                botonInfo.innerHTML = '<img src="./imagenes/icono-removebg-preview.png" alt="Más información">';
+                botonInfo.href = `item.html?type=${categoria}&id=${elemento.url.split('/').filter(Boolean).pop()}`;
+                botonInfo.classList.add('info');
+                div.appendChild(botonInfo);
 
-                    lista.appendChild(div);
-                }
+                lista.appendChild(div);
             });
 
             gestionarPaginacion(data);
