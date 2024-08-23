@@ -2,11 +2,10 @@ let pagina = 1;
 let informacion;
 
 function listarElementos() {
-    // Obtener la categoría seleccionada
     let categoria = document.querySelector("#category").value;
     let lista = document.querySelector("#list");
 
-    // Realizar la solicitud de la API
+
     fetch(`https://swapi.dev/api/${categoria}/?page=${pagina}`)
         .then(response => response.json())
         .then(data => {
@@ -70,7 +69,7 @@ document.querySelector("#filter").addEventListener('change', () => {
 });
 
 document.querySelector("#searchForm button").addEventListener('click', (event) => {
-    event.preventDefault();  // Previene el comportamiento predeterminado del botón
+    event.preventDefault();  
 
     let busqueda = document.querySelector("#searchField").value;
     let categoria = document.querySelector("#category").value;

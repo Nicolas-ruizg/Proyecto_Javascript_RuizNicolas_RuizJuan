@@ -1,7 +1,7 @@
-/* General */
+
 body {
     font-family: 'Arial', sans-serif;
-    color: #f0f0f0; /* Color de texto claro para contraste */
+    color: #f0f0f0; 
     margin: 0;
     padding: 0;
     background: url('imagenes/galaxia.jpg') no-repeat center center fixed;
@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    background: rgba(0, 0, 0, 0.8); 
     border-radius: 15px;
     color: #fff;
     padding: 30px;
@@ -32,7 +32,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px; /* Espaciado entre elementos */
+    gap: 15px; 
     margin: 10px 0;
 }
 
@@ -42,7 +42,7 @@ header {
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
     color: #00ffff; /* Texto cian */
-    width: 250px; /* Ancho ajustado */
+    width: 250px; 
     backdrop-filter: blur(5px); /* Difuminado de fondo */
 }
 
@@ -57,7 +57,7 @@ header {
 }
 
 #filter, #options {
-    margin: 0 15px; /* Espaciado entre selectores */
+    margin: 0 15px; 
 }
 
 button {
@@ -186,7 +186,7 @@ button img {
 }
 .btnHome:hover {
     color: black;
-    background-color: #faed27; /* Fondo amarillo al pasar el mouse */
+    background-color: #faed27; 
     box-shadow: inset 0 0 15px 0 #faed27, 0 0 25px #faed27; /* Efecto de neón más fuerte */
 }
 
@@ -207,20 +207,20 @@ button img {
 }
 
 span {
-    color: #faed27; /* Color amarillo */
+    color: #faed27; 
 }
 
 h1 {
     display: flex;
     justify-content: center;
-    font-size: 2em; /* Tamaño de fuente aumentado */
+    font-size: 2em; 
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Sombra de texto de neón */
 }
 
 .content {
     position: relative;
     z-index: 1;
-    color: #f0f0f0; /* Color de texto claro */
+    color: #f0f0f0; 
     text-align: center;
     padding: 50px;
     backdrop-filter: blur(10px); /* Difuminado del fondo */
@@ -230,7 +230,7 @@ label, input {
     display: block;
     margin: 20px auto;
     font-size: 1.2rem;
-    color: #f0f0f0; /* Color de texto claro */
+    color: #f0f0f0; 
 }
 
 input {
@@ -238,7 +238,7 @@ input {
     border-radius: 10px;
     border: 1px solid #00ffff; /* Borde cian */
     text-align: center;
-    width: 150px; /* Ancho ajustado */
+    width: 150px; 
     background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
     color: #00ffff; /* Texto cian */
 }
@@ -246,18 +246,18 @@ input {
 
 @media (max-width: 425px) {
 
-    /* Logo más pequeño y centrado */
+    
     .logo {
         width: 35%;
         height: auto;
         margin: 0 auto;
     }
 
-    /* Texto de bienvenida centrado y ajustado */
+    
     .bienvenida p {
         text-align: center;
         font-size: 0.9em;
-        width: 80%; /* Ancho ajustado para que no se corte el texto */
+        width: 80%; 
         margin: 0 auto;
     }
 
@@ -267,20 +267,20 @@ input {
         gap: 5px; 
         justify-content: center;
         overflow: hidden;
-        padding: 5px; /* Menor padding para más espacio en pantalla */
+        padding: 5px; 
     }
 
-    /* Ajuste de la pregunta */
+    
     .pregunta {
         padding-top: 20px;
-        font-size: 0.9em; /* Texto ligeramente más pequeño */
+        font-size: 0.9em; 
     }
 
     .bienvenida {
-        margin-top: 30px; /* Menor margen superior */
+        margin-top: 30px; 
     }
 
-    /* Ajuste de selección de categorías */
+    
     #category select {
         height: 35px;
         width: 100px;
@@ -292,25 +292,25 @@ input {
         height: 30px;
     }
 
-    /* Ajuste de la lista */
+
     #list {
         margin-top: 20px;
         display: grid;
-        gap: 5px; /* Menor espacio entre los elementos */
+        gap: 5px; 
         padding-bottom: 10px;
     }
 
     #list div {
-        font-size: 0.8em; /* Texto más pequeño para caber mejor en la pantalla */
+        font-size: 0.8em; 
     }
 
     #buttons {
-        padding: 20px; /* Menor padding general */
+        padding: 20px; 
         padding-top: 10px;
     }
 
     #buttons button {
-        font-size: 0.9em; /* Texto más pequeño en los botones */
+        font-size: 0.9em; 
     }
 
     .btnHome {
@@ -318,35 +318,35 @@ input {
         font-size: 0.9em;
     }
 
-    /* Detalles ajustados */
+ 
     .details {
         color: #F2F2F2;
         margin: auto;
-        margin-top: 40px; /* Menor margen superior */
-        padding: 15px; /* Menor padding */
+        margin-top: 40px; 
+        padding: 15px; 
         min-height: 80vh;
-        width: 95%; /* Mayor anchura para aprovechar el espacio */
+        width: 95%; 
         background-size: 300px;
     }
 
     .details p {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 0.9em; /* Texto más pequeño en párrafos */
+        font-size: 0.9em; 
     }
 
-    /* Ajuste de título */
+    
     h1 {
         color: #FFE81F;
         font-size: 1.3em;
         padding-bottom: 15px;
     }
 
-    /* Categoría ajustada */
+    
     #Category {
         margin-top: 10px;
     }
 
-    /* Formulario de búsqueda optimizado */
+    
     #searchForm {
         position: relative;
         top: auto;
@@ -355,14 +355,14 @@ input {
         width: 100%;
         text-align: center;
         display: flex;
-        flex-direction: column; /* Colocar en columna */
+        flex-direction: column; 
         align-items: center;
         gap: 10px;
     }
 
     #searchField {
-        width: 90%; /* Ancho del campo de búsqueda ajustado */
-        padding: 10px; /* Mejor padding para mejor usabilidad */
+        width: 90%; 
+        padding: 10px; 
     }
 }
 
